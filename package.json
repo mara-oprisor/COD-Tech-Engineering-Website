@@ -1,0 +1,27 @@
+{
+  "name": "cod-tech-engineering-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "xcopy src\\assets dist\\assets /I /E /Y && copy src\\index.html dist\\index.html && npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify && xcopy src\\assets dist\\assets /I /E /Y && copy src\\index.html dist\\index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mara-oprisor/COD-Tech-Engineering-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mara-oprisor/COD-Tech-Engineering-Website/issues"
+  },
+  "homepage": "https://github.com/mara-oprisor/COD-Tech-Engineering-Website#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  }
+}
