@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "xcopy src\\assets dist\\assets /I /E /Y && copy src\\index.html dist\\index.html && npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify && xcopy src\\assets dist\\assets /I /E /Y && copy src\\index.html dist\\index.html",
+"scripts": {
+    "dev": "mkdir -p dist/assets && cp -r src/assets/* dist/assets/ && cp src/index.html dist/index.html && npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify && mkdir -p dist/assets && cp -r src/assets/* dist/assets/ && cp src/index.html dist/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
