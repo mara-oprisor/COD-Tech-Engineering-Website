@@ -9,6 +9,20 @@
 </head>
 
 <body class="min-h-screen antialiased relative overflow-hidden">
+
+    <nav class="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/100 to-transparent">
+        <div class="w-full px-10 h-30 flex items-center">
+            <a href="#" onclick="navigate('about', event)" class="hover:opacity-75 transition-opacity mr-20">
+                <img src="assets/logo.png" alt="COD Tech Engineering" class="h-30 object-contain" />
+            </a>
+            <div class="flex items-center gap-8">
+                <a href="index.html" id="link-about" onclick="navigate('about', event)"
+                class="nav-link text-base font-bold text-white/80 hover:text-white pb-0.5 tracking-widest uppercase active">About</a>
+                <a href="contact.html" id="link-contact" onclick="navigate('contact', event)"
+                class="nav-link text-base font-bold text-white/80 hover:text-white pb-0.5 tracking-widest uppercase">Contact</a>
+            </div>
+        </div>
+    </nav>
     
     <div class="fixed inset-0 z-[-1]">
         <div class="absolute inset-0 bg-[url('assets/background.jpg')] bg-cover bg-center bg-no-repeat blur-md scale-110 grayscale-[30%]"></div>
