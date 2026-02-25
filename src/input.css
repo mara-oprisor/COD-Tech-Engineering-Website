@@ -1,5 +1,71 @@
 @import "tailwindcss";
 
+body { font-family: 'Barlow', sans-serif; }
+.tech-font { font-family: 'Rajdhani', sans-serif; }
+.mono { font-family: 'Share Tech Mono', monospace; }
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.bracket-card { position: relative; }
+.bracket-card::before, .bracket-card::after {
+    content: '';
+    position: absolute;
+    width: 12px; height: 12px;
+    border-color: rgba(96, 165, 250, 0.5);
+    border-style: solid;
+}
+.bracket-card::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.bracket-card::after  { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+.nav-link { position: relative; }
 .nav-link::after {
-    background: white;
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0;
+    width: 0; height: 1px;
+    background: #60a5fa;
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+.glow-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(96,165,250,0.6), transparent);
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+.card:hover {
+    background: rgba(96, 165, 250, 0.07);
+    border-color: rgba(96, 165, 250, 0.35);
+    transform: translateY(-2px);
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.7s ease forwards; }
+.d1 { animation-delay: 0.1s; opacity: 0; }
+.d2 { animation-delay: 0.25s; opacity: 0; }
+.d3 { animation-delay: 0.4s; opacity: 0; }
+.d4 { animation-delay: 0.55s; opacity: 0; }
+.d5 { animation-delay: 0.7s; opacity: 0; }
+.d6 { animation-delay: 0.85s; opacity: 0; }
+
+.ambient {
+    position: fixed;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
 }
