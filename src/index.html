@@ -16,11 +16,14 @@
                 <img src="assets/logo.png" alt="COD Tech Engineering" class="h-30 md:h-30 object-contain" />
             </div>
             <div class="flex items-center gap-6 md:gap-8">
-                <a href="index.html" id="link-about" onclick="navigate('about', event)"
+                <a href="index.html" id="link-about" onclick="navigate('about', event)" data-i18n="nav-about"
                 class="nav-link text-sm md:text-base font-bold text-white/80 hover:text-white pb-0.5 tracking-widest uppercase active">About</a>
-                <a href="contact.html" id="link-contact" onclick="navigate('contact', event)"
+                <a href="contact.html" id="link-contact" onclick="navigate('contact', event)" data-i18n="nav-contact"
                 class="nav-link text-sm md:text-base font-bold text-white/80 hover:text-white pb-0.5 tracking-widest uppercase">Contact</a>
             </div>
+            <button id="lang-toggle" onclick="toggleLang()" class="ml-auto text-sm font-bold text-white/80 hover:text-white tracking-widest uppercase transition-colors">
+                RO
+            </button>
         </div>
     </nav>
     
@@ -34,10 +37,10 @@
         <div class="fade-up d1 mb-4">
             <span class="mono text-base md:text-2xl text-blue-400/80 tracking-[0.3em] md:tracking-[0.4em] uppercase">COD Tech Engineering</span>
         </div>
-        <h1 class="fade-up d2 tech-font text-4xl md:text-8xl font-bold uppercase leading-none tracking-wide drop-shadow-2xl mb-3">
+        <h1 class="fade-up d2 tech-font text-4xl md:text-8xl font-bold uppercase leading-none tracking-wide drop-shadow-2xl mb-3" data-i18n="about-slogan1">
             Technical Solutions
         </h1>
-        <h2 class="fade-up d3 tech-font text-3xl md:text-7xl font-semibold uppercase leading-none tracking-wide text-white/50 mb-12 md:mb-16">
+        <h2 class="fade-up d3 tech-font text-3xl md:text-7xl font-semibold uppercase leading-none tracking-wide text-white/50 mb-12 md:mb-16" data-i18n="about-slogan2">
             Without Compromise.
         </h2>
 
@@ -46,21 +49,21 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-20">
 
             <div class="fade-up d3 card bracket-card bg-white/30 border border-white/10 p-6 md:p-8 backdrop-blur-sm">
-                <h2 class="mono text-blue-400 text-xl md:text-2xl tracking-widest uppercase block mb-4">Mission</h2>
-                <p class="text-white/60 text-base md:text-xl leading-relaxed font-light mb-4">
+                <h2 class="mono text-blue-400 text-xl md:text-2xl tracking-widest uppercase block mb-4" data-i18n="about-mission-title">Mission</h2>
+                <p class="text-white/60 text-base md:text-xl leading-relaxed font-light mb-4" data-i18n="about-mission-body1">
                     To design, implement, and maintain building services and technical building systems that ensure operational continuity, controlled environments, and optimized energy performance.
                 </p>
-                <p class="text-white/90 text-base md:text-xl leading-relaxed font-light">
+                <p class="text-white/90 text-base md:text-xl leading-relaxed font-light" data-i18n="about-mission-body2">
                     We apply rigorous engineering standards, field-proven methodologies, and preventive maintenance strategies to maximize system reliability and lifecycle efficiency.
                 </p>
             </div>
 
             <div class="fade-up d4 card bracket-card bg-white/30 border border-white/10 p-6 md:p-8 backdrop-blur-sm">
-                <h2 class="mono text-blue-400/60 text-xl md:text-2xl tracking-widest uppercase block mb-4">Vision</h2>
-                <p class="text-white/60 text-base md:text-xl leading-relaxed font-light mb-4">
+                <h2 class="mono text-blue-400/60 text-xl md:text-2xl tracking-widest uppercase block mb-4" data-i18n="about-vision-title">Vision</h2>
+                <p class="text-white/60 text-base md:text-xl leading-relaxed font-light mb-4" data-i18n="about-vision-body1">
                     To become a recognized technical partner in industrial, building services and facility and equipment maintenance, delivering engineered solutions that improve system performance, reduce downtime, and extend asset lifespan.
                 </p>
-                <p class="text-white/90 text-base md:text-xl leading-relaxed font-light">
+                <p class="text-white/90 text-base md:text-xl leading-relaxed font-light" data-i18n="about-vision-body2">
                     We aim to set a benchmark for technical competence, precision execution, and long-term operational reliability.
                 </p>
             </div>
@@ -68,40 +71,40 @@
         </div>
 
         <div class="fade-up d4 mb-10">
-            <h2 class="mono text-blue-400/60 text-xl md:text-2xl tracking-widest uppercase block mb-2">Values</h2>
+            <h2 class="mono text-blue-400/60 text-xl md:text-2xl tracking-widest uppercase block mb-2" data-i18n="about-values-title">Values</h2>
             <div class="glow-line mt-6"></div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
 
             <div class="fade-up d3 card bracket-card border border-white/10 bg-white/30 p-5 md:p-6 backdrop-blur-sm">
-                <h3 class="tech-font text-xl md:text-2xl font-bold uppercase tracking-wider text-white mb-3">Technical Competence</h3>
-                <p class="text-white/90 text-base md:text-lg font-light leading-relaxed">Each project is based on engineering analysis, correct sizing and compliance with technical standards.</p>
+                <h3 class="tech-font text-xl md:text-2xl font-bold uppercase tracking-wider text-white mb-3" data-i18n="about-values-title1">Technical Competence</h3>
+                <p class="text-white/90 text-base md:text-lg font-light leading-relaxed" data-i18n="about-values-body1">Each project is based on engineering analysis, correct sizing and compliance with technical standards.</p>
             </div>
 
             <div class="fade-up d4 card bracket-card border border-white/10 bg-white/30 p-5 md:p-6 backdrop-blur-sm">
-                <h3 class="tech-font text-xl md:text-2xl font-bold uppercase tracking-wider text-white mb-3">Integrated Execution</h3>
-                <p class="text-white/90 text-base md:text-lg font-light leading-relaxed">We manage the entire process — design, installation, commissioning and maintenance — ensuring coherence and quality control.</p>
+                <h3 class="tech-font text-xl md:text-2xl font-bold uppercase tracking-wider text-white mb-3" data-i18n="about-values-title2">Integrated Execution</h3>
+                <p class="text-white/90 text-base md:text-lg font-light leading-relaxed" data-i18n="about-values-body2">We manage the entire process — design, installation, commissioning and maintenance — ensuring coherence and quality control.</p>
             </div>
 
             <div class="fade-up d5 card bracket-card border border-white/10 bg-white/30 p-5 md:p-6 backdrop-blur-sm">
-                <h3 class="tech-font text-xl md:text-2xl font-bold uppercase tracking-wider text-white mb-3">Applied Innovation</h3>
-                <p class="text-white/90 text-base md:text-lg font-light leading-relaxed">We adopt modern solutions: energy-efficient systems, intelligent automation, continuous monitoring and optimization.</p>
+                <h3 class="tech-font text-xl md:text-2xl font-bold uppercase tracking-wider text-white mb-3" data-i18n="about-values-title3">Applied Innovation</h3>
+                <p class="text-white/90 text-base md:text-lg font-light leading-relaxed" data-i18n="about-values-body3">We adopt modern solutions: energy-efficient systems, intelligent automation, continuous monitoring and optimization.</p>
             </div>
 
             <div class="fade-up d4 card bracket-card border border-white/10 bg-white/30 p-5 md:p-6 backdrop-blur-sm">
-                <h3 class="tech-font text-xl md:text-2xl font-bold uppercase tracking-wider text-white mb-3">Reliability & Continuity</h3>
-                <p class="text-white/90 text-base md:text-lg font-light leading-relaxed">We understand the impact of interruptions. We design and maintain systems oriented towards durability and stable operation.</p>
+                <h3 class="tech-font text-xl md:text-2xl font-bold uppercase tracking-wider text-white mb-3" data-i18n="about-values-title4">Reliability & Continuity</h3>
+                <p class="text-white/90 text-base md:text-lg font-light leading-relaxed" data-i18n="about-values-body4">We understand the impact of interruptions. We design and maintain systems oriented towards durability and stable operation.</p>
             </div>
 
             <div class="fade-up d5 card bracket-card border border-white/10 bg-white/30 p-5 md:p-6 backdrop-blur-sm">
-                <h3 class="tech-font text-xl md:text-2xl font-bold uppercase tracking-wider text-white mb-3">Professional Responsibility</h3>
-                <p class="text-white/90 text-base md:text-lg font-light leading-relaxed">We assume the performance of the works performed and build partnerships based on transparency and trust.</p>
+                <h3 class="tech-font text-xl md:text-2xl font-bold uppercase tracking-wider text-white mb-3" data-i18n="about-values-title5">Professional Responsibility</h3>
+                <p class="text-white/90 text-base md:text-lg font-light leading-relaxed" data-i18n="about-values-body5">We assume the performance of the works performed and build partnerships based on transparency and trust.</p>
             </div>
 
             <a href="contact.html" class="fade-up d6 card bracket-card border border-blue-400/30 bg-blue-400/5 p-5 md:p-6 backdrop-blur-sm flex flex-col justify-between group hover:bg-blue-400/10 transition-all duration-300">
-                <h3 class="tech-font text-xl md:text-2xl font-bold uppercase tracking-wider text-white group-hover:text-blue-300 transition-colors mb-3">Get in Touch →</h3>
-                <p class="text-white/60 text-base md:text-lg font-light leading-relaxed">Ready to start a project? Reach out and let's talk engineering.</p>
+                <h3 class="tech-font text-xl md:text-2xl font-bold uppercase tracking-wider text-white group-hover:text-blue-300 transition-colors mb-3" data-i18n="about-contact1">Get in Touch →</h3>
+                <p class="text-white/60 text-base md:text-lg font-light leading-relaxed" data-i18n="about-contact2">Ready to start a project? Reach out and let's talk engineering.</p>
             </a>
 
         </div>
@@ -111,13 +114,15 @@
 <footer class="w-full py-6 px-6 border-t border-white/5 backdrop-blur-lg">
     <div class="flex items-center justify-center">
         <p class="text-white/30 text-[11px] md:text-[12px] uppercase tracking-[0.2em] text-center">
-            &copy; <span id="current-year"></span> COD Tech Engineering. All rights reserved.
+            &copy; <span id="current-year"></span> <span data-i18n="footer">COD Tech Engineering. All rights reserved.</span>
         </p>
     </div>
 </footer>
 
+</html>
+
+<script src="./assets/translation.js"></script>
+<script src="./assets/i18n.js"></script>
 <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
 </script>
-
-</html>
